@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import React from "react"
+import Home from "./components/home/home"
+import Personal from "./components/personal/personal"
+import "./bootstrap.min.css"
+import Players from "./components/personal/player"
+import Leagues from "./components/scores/league"
+import Minor from "./components/scores/minor"
+import Yesterday from "./components/scores/yesterday"
+import Tomorrows from "./components/scores/tomorrow"
+import Live from "./components/scores/live"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+
+  return(
+
+    <Router>
+      <Routes>
+        <Route path="/" element = {<Home/>}></Route>
+        <Route path="/personal" element = {<Personal/>}></Route>
+        <Route path="/player" element = {<Players/>}></Route>
+        <Route path="/league" element = {<Leagues/>}></Route>
+        <Route path="/minor" element={<Minor/>}></Route>
+        <Route path="/yesterday" element={<Yesterday/>}></Route>
+        <Route path="/tomorrow" element={<Tomorrows/>}></Route>
+        <Route path="/live" element={<Live/>}></Route>
+      </Routes>
+    </Router>
+
+  )
 }
 
-export default App;
+
+export default App

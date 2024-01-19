@@ -1,0 +1,62 @@
+.main_info{
+    display : flex;
+}
+.middle{
+    display : flex;
+}
+.main_selection{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.top_class{
+    background-color: rgb(2, 2, 34);
+}
+.team_logos{
+    width: 100px;
+    height: 100px;
+}
+.main_row{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#awaya{
+    text-align: right;
+    color: gold;
+}
+.short_nav{
+
+  
+    display: flex;
+    overflow-x: auto;
+}
+.ref_box{
+    border: solid;
+    border-color: rgb(2, 2, 34);
+}
+.info_div{
+   height: 350px;
+    overflow-y: auto;
+    text-align: center;
+
+}
+
+#main{
+       
+            
+    display: flex;
+    justify-content: right;
+ 
+}
+
+#main-left{
+ 
+    display: flex;  
+
+}
+#pen{
+    color : red
+}

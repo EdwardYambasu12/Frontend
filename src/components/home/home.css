@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(2, 2, 34);
+    height: 1000px;
+    text-decoration: none;
+}
+#scores{
+    width: 40%;
+}
+#news{
+    width: 40%;
+}
+.button_list{
+    width: 80%;
+    margin-top : 1%;
+    margin-left: 20%;
+}

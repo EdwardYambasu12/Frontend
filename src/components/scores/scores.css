@@ -1,0 +1,49 @@
+.row{
+    justify-content: space-between;
+}
+#scores_line{
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    
+
+}
+#main_txt{
+    animation: txt 5s forwards 1.5s infinite ease;
+}
+#main_txt{
+    color : gold
+}
+
+@keyframes txts {
+    0%{
+        color: red;
+    }
+    25%{
+        color: blue;
+    }
+    50%{
+        color: yellow;
+    }
+    75%{
+        color: green;
+    }
+
+}
+@media only screen and (max-width : 750px){
+    #leagues{
+        display: none;
+    }
+    #select_league{
+        
+        width: 100%;
+    }
+
+}
+@media only screen and (min-width : 750px){
+    #select_league{
+        display: none;
+        width: 100%;
+    }
+    
+}
+
