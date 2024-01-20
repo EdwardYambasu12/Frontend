@@ -834,15 +834,9 @@ const [ret, setRet] = useState(<Backdrop
             console.log(json)
             const main_guy = json[props.item.match_id]
             let reversed = main_guy.live_comments.reverse()
-            if(main_guy == ""){
-                setRet(
-                    <>
-                        The Match isn't Live it's Either Finished or Haven't started
-                    </>
-                )
-            }
 
-            else{
+
+            if(true){
                 console.log("reading access")
                
                 setRet(
@@ -865,7 +859,14 @@ const [ret, setRet] = useState(<Backdrop
                     })
                 )
             }
-
+            else{
+             
+                setRet(
+                        <>
+                        <h1>Match isn't Live</h1>
+                    </>
+                )
+            }
 
         } catch (error) {
             

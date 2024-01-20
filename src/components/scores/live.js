@@ -774,145 +774,145 @@ function Live(){
     
     }
   
+    setRet(
+        <>
+            <div>
+  <div style = {{display : "flex"}}>{wc2.crest} <h3 className = "text-light"> {wc2.name} </h3>
+  </div>
+  {wc1}
+  </div>
   
+  
+  <div>
+  <div style = {{display : "flex"}}>{cl2.crest} <h3 className = "text-light"> {cl2.name} </h3>
+  </div>
+  {cl1}
+  
+  
+  
+  </div>
+  
+  <div>
+  <div style = {{display : "flex"}}>{eup2.crest} <h3 className = "text-light"> {eup2.name} </h3>
+  </div>
+  {eup1}
+  
+  
+  </div>
+  
+  
+  
+  <div>
+  <div style = {{display : "flex"}}>{con2.crest} <h3 className = "text-light"> {con2.name} </h3>
+  </div>
+  {con1}
+  
+  </div>
+  
+  
+  <div>
+  <div style = {{display : "flex"}}>{afcon2.crest} <h3 className = "text-light"> {afcon2.name} </h3>
+  </div>
+  {afcon1}
+  
+  
+  
+  <div>
+  <div style = {{display : "flex"}}>{euros2.crest} <h3 className = "text-light"> {euros2.name} </h3>
+  </div>
+  {euros1}
+  
+  
+  
+  <div>
+  <div style = {{display : "flex"}}>{copa2.crest} <h3 className = "text-light"> {copa2.name} </h3>
+  </div>
+  {copa1}
+  
+  </div>
+  
+  <div>
+  <div style = {{display : "flex"}}>{asia2.crest} <h3 className = "text-light"> {asia2.name} </h3>
+  </div>
+  {asia1}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{epl2.crest} <h3 className = "text-light"> {epl2.name} </h3>
+  </div>
+  {epl1}
+  </div>
+  
+  <div>
+  <div style = {{display : "flex"}}>{laliga2.crest} <h3 className = "text-light"> {laliga2.name} </h3>
+  </div>
+  {laliga1}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{serial2.crest} <h3 className = "text-light"> {serial2.name} </h3>
+  </div>
+  {seria1}
+  </div>
+  
+  <div>
+  <div style = {{display : "flex"}}>{bundesliga2.crest} <h3 className = "text-light"> {bundesliga2.name} </h3>
+  </div>
+  {bundeslig1}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{ligue2.crest} <h3 className = "text-light"> {ligue2.name} </h3>
+  </div>
+  {ligue}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{fa_cup2.crest} <h3 className = "text-light"> {fa_cup2.name} </h3>
+  </div>
+  {fa_cup1}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{copadel2.crest} <h3 className = "text-light"> {copadel2.name} </h3>
+  </div>
+  {copadel1}
+  
+  </div>
+  <div>
+  <div style = {{display : "flex"}}>{mls2.crest} <h3 className = "text-light"> {mls2.name} </h3>
+  </div>
+  {mls1}
+  
+  </div>
+   <div>
+  <div style = {{display : "flex"}}>{saudi2.crest} <h3 className = "text-light"> {saudi2.name} </h3>
+  </div>
+  {saudi}
+  
+  </div>
+  
+  
+   <div>
+  <div style = {{display : "flex"}}>{others2.crest} <h3 className = "text-light"> {others2.name} </h3>
+  
+  </div>
+  {others1}
+  </div>
+  
+  </div>
+  
+  
+  </div>
+  
+        </>
+      )
     }
     catch (error){
 
     }
 
-    setRet(
-      <>
-          <div>
-<div style = {{display : "flex"}}>{wc2.crest} <h3 className = "text-light"> {wc2.name} </h3>
-</div>
-{wc1}
-</div>
-
-
-<div>
-<div style = {{display : "flex"}}>{cl2.crest} <h3 className = "text-light"> {cl2.name} </h3>
-</div>
-{cl1}
-
-
-
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{eup2.crest} <h3 className = "text-light"> {eup2.name} </h3>
-</div>
-{eup1}
-
-
-</div>
-
-
-
-<div>
-<div style = {{display : "flex"}}>{con2.crest} <h3 className = "text-light"> {con2.name} </h3>
-</div>
-{con1}
-
-</div>
-
-
-<div>
-<div style = {{display : "flex"}}>{afcon2.crest} <h3 className = "text-light"> {afcon2.name} </h3>
-</div>
-{afcon1}
-
-
-
-<div>
-<div style = {{display : "flex"}}>{euros2.crest} <h3 className = "text-light"> {euros2.name} </h3>
-</div>
-{euros1}
-
-
-
-<div>
-<div style = {{display : "flex"}}>{copa2.crest} <h3 className = "text-light"> {copa2.name} </h3>
-</div>
-{copa1}
-
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{asia2.crest} <h3 className = "text-light"> {asia2.name} </h3>
-</div>
-{asia1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{epl2.crest} <h3 className = "text-light"> {epl2.name} </h3>
-</div>
-{epl1}
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{laliga2.crest} <h3 className = "text-light"> {laliga2.name} </h3>
-</div>
-{laliga1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{serial2.crest} <h3 className = "text-light"> {serial2.name} </h3>
-</div>
-{seria1}
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{bundesliga2.crest} <h3 className = "text-light"> {bundesliga2.name} </h3>
-</div>
-{bundeslig1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{ligue2.crest} <h3 className = "text-light"> {ligue2.name} </h3>
-</div>
-{ligue}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{fa_cup2.crest} <h3 className = "text-light"> {fa_cup2.name} </h3>
-</div>
-{fa_cup1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{copadel2.crest} <h3 className = "text-light"> {copadel2.name} </h3>
-</div>
-{copadel1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{mls2.crest} <h3 className = "text-light"> {mls2.name} </h3>
-</div>
-{mls1}
-
-</div>
- <div>
-<div style = {{display : "flex"}}>{saudi2.crest} <h3 className = "text-light"> {saudi2.name} </h3>
-</div>
-{saudi}
-
-</div>
-
-
- <div>
-<div style = {{display : "flex"}}>{others2.crest} <h3 className = "text-light"> {others2.name} </h3>
-
-</div>
-{others1}
-</div>
-
-</div>
-
-
-</div>
-
-      </>
-    )
+   
    }
 
 
