@@ -908,10 +908,11 @@ function Live(){
         </>
       )
     }
+
     catch (error){
 
     }
-
+setTimeout(previous, 10000)
    
    }
 
@@ -920,7 +921,7 @@ function Live(){
 previous()
 
     return(
-        <body style={{maxHeight : window.innerHeight - 50, }}>
+        <body style={{maxHeight : window.innerHeight}}>
             <Nav/>
             
             <div className="matches_date">

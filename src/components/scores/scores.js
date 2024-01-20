@@ -23,7 +23,6 @@ function Scores(){
                 </div>
                 
                 <div className="col-md-8 order-md-2" id="scores_line">
-                    <h3 className="text-center" id="main_txt">Scores</h3>
                     <Matches/>
                     <button className="btn btn-warning" style={{position : "fixed", bottom:"2%", right : "0%"}}>📌 Pinned Matches</button>
                 </div>

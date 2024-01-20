@@ -920,7 +920,7 @@ function Yesterday(){
 previous()
 
     return(
-        <body style={{maxHeight : window.innerHeight - 50, }}>
+        <body style={{}}>
             <Nav/>
             
             <div className="matches_date">

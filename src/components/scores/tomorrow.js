@@ -922,7 +922,7 @@ function Tomorrows(){
 previous()
 
     return(
-        <body style={{maxHeight : window.innerHeight - 50, }}>
+        <body >
             <Nav/>
             
             <div className="matches_date">

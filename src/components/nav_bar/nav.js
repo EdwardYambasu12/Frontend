@@ -6,7 +6,7 @@ function Nav(){
         <>
             <nav className="main_nav">
                 <div className="title">
-                <img alt="logo" src={require("../images/main_logo.png")} style={{height : "50px", width : "50px"}}></img>
+                <img alt="logo" src={require("../images/main_logo.png")} style={{height : "50px", width : "50px", borderRadius : "50%"}}></img>
                 <h3>SportsUp</h3>
                 
                 </div>

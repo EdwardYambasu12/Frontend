@@ -32,11 +32,11 @@ let num = 0
     console.log(state)
     async function fetcher(){
         try{
-        const result = await fetch("https://apiv3.apifootball.com/?action=get_events&league_id="+state.league_id+"&from="+today_date+"&to="+tomorrow_date+"&APIkey=6d6432265f60f4918073e2430f3eb06bd76d5256c9b46318c83f14c24011a65d")
+        const result = await fetch("https://apiv3.apifootball.com/?action=get_events&league_id="+state.league_id+"&from="+today_date+"&to="+tomorrow_date+"&APIkey=d1872d2c1145e86d9b321ed826416316b9813191e72cde2cb6b3b16206fd4aa9")
         const json = await result.json()
         console.log(json)
         
-        const result1 = await fetch("https://apiv3.apifootball.com/?action=get_teams&league_id="+state.league_id+"&APIkey=6d6432265f60f4918073e2430f3eb06bd76d5256c9b46318c83f14c24011a65d")
+        const result1 = await fetch("https://apiv3.apifootball.com/?action=get_teams&league_id="+state.league_id+"&APIkey=d1872d2c1145e86d9b321ed826416316b9813191e72cde2cb6b3b16206fd4aa9")
         const json1 = await result1.json()
         console.log(json1)
 
