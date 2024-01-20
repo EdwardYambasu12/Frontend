@@ -159,472 +159,27 @@ function Live(){
   })
   
 
-        if(epl.length > 0){
+  if(epl.length > 0){
         
-          setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png"  style = {{height : "40px", width : "40px"}}></img>)})
-          setpl(epl.map((item)=>{
-            
-              return(
-                                                  <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                      
-                                  <div className="indi_matches">
-  
-                                  <div className="teams_names">
-                                  <h4>{item.match_hometeam_name}</h4>
-                                  <h4>{item.match_awayteam_name}</h4>
-                                  </div>
-                                  <div className="teams_scores">
-                                      <h4>{item.match_hometeam_score}</h4>
-                                      <h4>{item.match_awayteam_score}</h4>
-                                  </div>
-  
-                          <div className="time_and_love">
-                                          <h6 style={{color : "warning"}}>         {item.match_status}'
-                                      </h6>
-                                     <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                                  
-                                  
-                          </div>
-                          </div>
-                          </Link>
-              )
-               } ))
-  
-      }
-      if(others.length > 0){
-  
-  
-          setothers2({name     : "Other Leagues", crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
-        setothers(others.map((item)=>{
-          
-            return(
-                                                <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                    
-                                <div className="indi_matches">
-  
-                                <div className="teams_names">
-                                <h4>{item.match_hometeam_name}</h4>
-                                <h4>{item.match_awayteam_name}</h4>
-                                </div>
-                                <div className="teams_scores">
-                                    <h4>{item.match_hometeam_score}</h4>
-                                    <h4>{item.match_awayteam_score}</h4>
-                                </div>
-  
-                        <div className="time_and_love">
-                                        <h6 style={{color : "warning"}}>           {item.match_status}'
-                                    </h6>
-                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                                
-                                
-                        </div>
-                        </div>
-                        </Link>
-            )
-             } ))
-  
-    }
-  
-              
-          if(wc.length > 0){
-  
-  
-              setwc2({name     : "World Cup", crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/28_world-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
-            setwc(wc.map((item)=>{
-              
-                return(
-                                                    <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                        
-                                    <div className="indi_matches">
-    
-                                    <div className="teams_names">
-                                    <h4>{item.match_hometeam_name}</h4>
-                                    <h4>{item.match_awayteam_name}</h4>
-                                    </div>
-                                    <div className="teams_scores">
-                                        <h4>{item.match_hometeam_score}</h4>
-                                        <h4>{item.match_awayteam_score}</h4>
-                                    </div>
-    
-                            <div className="time_and_love">
-                                            <h6 style={{color : "warning"}}>           {item.match_status}'
-                                        </h6>
-                                     <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                                    
-                                    
-                            </div>
-                            </div>
-                            </Link>
-                )
-                 } ))
-    
-        }
-    
-        
-        if(cl.length > 0){
-        
-            setcl2({name     : "UEFA Champions League", crest : (  <img src =     "https://apiv3.apifootball.com/badges/logo_leagues/3_uefa-champions-league.png"style = {{height : "40px", width : "40px"}}></img>)})
-        setcl(cl.map((item)=>{
-          
-            return(
-                                                <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                    
-                                <div className="indi_matches">
-    
-                                <div className="teams_names">
-                                <h4>{item.match_hometeam_name}</h4>
-                                <h4>{item.match_awayteam_name}</h4>
-                                </div>
-                                <div className="teams_scores">
-                                    <h4>{item.match_hometeam_score}</h4>
-                                    <h4>{item.match_awayteam_score}</h4>
-                                </div>
-    
-                        <div className="time_and_love">
-                                        <h6 style={{color : "warning"}}>       {item.match_status}'
-                                    </h6>
-                                   <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                                
-                                
-                        </div>
-                        </div>
-                        </Link>
-            )
-             } ))
-    
-    }
-    
-    
-    
-    if(eup.length > 0){
-            seteup2({name     : "UEFA EUROPEAN LEAGUE", crest : (    <img src=    "https://apiv3.apifootball.com/badges/logo_leagues/3_uefa-champions-league.png"style = {{height : "40px", width : "40px"}}></img>)})
-    seteup(eup.map((item)=>{
+    setepl2({name     : "Premier League",crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
+    setpl(epl.map((item)=>{
       
         return(
                                             <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
                                                                 
                             <div className="indi_matches">
-    
+
                             <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
                             </div>
                             <div className="teams_scores">
                                 <h4>{item.match_hometeam_score}</h4>
                                 <h4>{item.match_awayteam_score}</h4>
                             </div>
-    
+
                     <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                                <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(con.length > 0){
-               setcon2({name     : "UEFA Conference League", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/683_uefa-europa-conference-league.png"style = {{height : "40px", width : "40px"}}></img>)})
-                setcon(con.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                                <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    
-    if(afcon.length > 0){
-  
-        setafcon2( {name     : "African Cup of Nations",crest : (<img src=  "https://apiv3.apifootball.com/badges/logo_leagues/29_africa-cup-of-nations-qualification.png" style = {{height : "40px", width : "40px"}}></img>)})
-    setafcon(afcon.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                      <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    
-    if(euros.length > 0){
-  
-               seteuros2({name     : "UEFA EUREOPEAN CHAMPIONSHIP", crest : (   "https://apiv3.apifootball.com/badges/logo_leagues/683_uefa-europa-conference-league.png")})
-    seteuros(euros.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    
-    
-    
-    
-    if(copa.length > 0){
-     
-               setcopa2({name     : "COPA AMERICA", crest : (  <img src =   "https://apiv3.apifootball.com/badges/logo_leagues/17_copa-america.png"style = {{height : "40px", width : "40px"}}></img>)})
-        setcopa(copa.map((item)=>{ 
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-      <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(asia.length > 0){
-  
-                setasia2({name     : "AFC ASIAN CUP", crest : (   <img src= "https://apiv3.apifootball.com/badges/logo_leagues/347_afc-asian-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setasia(asia.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                         <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    if(laliga.length > 0){
-  
-               setlaliga2({name     : "La Liga", crest : (   <img src= "https://apiv3.apifootball.com/badges/logo_leagues/302_la-liga.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setlaliga(laliga.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                         <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(seria_a.length > 0){
-    
-            setserial2({name     : "SERIA A",crest : ( <img src = "https://apiv3.apifootball.com/badges/logo_leagues/207_serie-a.png"style = {{height : "40px", width : "40px"}}></img>)})
-        setseria(seria_a.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                               <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    if(bundeslisga.length > 0){
-  
-            setbundesliga2({name     : "Bundesliga", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/175_bundesliga.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setbundesliga(bundeslisga.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                             <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(ligue1.length > 0){
-  
-            setligue2({name     : "Ligue 1", crest : ( <img src = "https://apiv3.apifootball.com/badges/logo_leagues/168_ligue-1.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setligue(ligue1.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
+                                    <h6 style={{color : "warning"}}>         {item.match_status}'
                                 </h6>
                                <p className="text-warning">{item.match_time} || {item.match_date}</p>
                             
@@ -634,146 +189,591 @@ function Live(){
                     </Link>
         )
          } ))
+
+}
+if(others.length > 0){
+
+
+    setothers2({name     : "Other Leagues", crest : ( <img  src ={require("../images/main_logo.png")}  style = {{height : "40px", width : "40px"}}></img>)})
+  setothers(others.map((item)=>{
     
-    }
-    
-    
-    if(copadel.length > 0){
-     
-            setcopadel2({name     : "Copa del Ray", crest : (<img src =" https://apiv3.apifootball.com/badges/logo_leagues/300_copa-del-rey.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setcopadel(copadel.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>
-                                {item.match_status}'
-                                </h6>
-      <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(fa_cup.length > 0){
+      return(
+                                          <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                              
+                          <div className="indi_matches">
+
+                          <div className="teams_names">
+ <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                          </div>
+                          <div className="teams_scores">
+                              <h4>{item.match_hometeam_score}</h4>
+                              <h4>{item.match_awayteam_score}</h4>
+                          </div>
+
+                  <div className="time_and_love">
+                                  <h6 style={{color : "warning"}}>           {item.match_status}'
+                              </h6>
+                           <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                          
+                          
+                  </div>
+                  </div>
+                  </Link>
+      )
+       } ))
+
+}
+
+        
+    if(wc.length > 0){
+
+
+        setwc2({name     : "World Cup", crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/28_world-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
+      setwc(wc.map((item)=>{
+        
+          return(
+                                              <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                                  
+                              <div className="indi_matches">
+
+                              <div className="teams_names">
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              </div>
+                              <div className="teams_scores">
+                                  <h4>{item.match_hometeam_score}</h4>
+                                  <h4>{item.match_awayteam_score}</h4>
+                              </div>
+
+                      <div className="time_and_love">
+                                      <h6 style={{color : "warning"}}>           {item.match_status}'
+                                  </h6>
+                               <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                              
+                              
+                      </div>
+                      </div>
+                      </Link>
+          )
+           } ))
+
+  }
+
   
-    setfa_cup2({name     : "England FA Cup", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/146_fa-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setfa(fa_cup.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                            <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(mls.length > 0){
+  if(cl.length > 0){
   
-            setmls2({name     : "Major League Soccer", crest : (<img src=  "https://apiv3.apifootball.com/badges/logo_leagues/332_mls.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setmls(mls.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
+      setcl2({name     : "UEFA Champions League", crest : (  <img src =     "https://apiv3.apifootball.com/badges/logo_leagues/3_uefa-champions-league.png"style = {{height : "40px", width : "40px"}}></img>)})
+  setcl(cl.map((item)=>{
     
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
+      return(
+                                          <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                              
+                          <div className="indi_matches">
+
+                          <div className="teams_names">
+ <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                          </div>
+                          <div className="teams_scores">
+                              <h4>{item.match_hometeam_score}</h4>
+                              <h4>{item.match_awayteam_score}</h4>
+                          </div>
+
+                  <div className="time_and_love">
+                                  <h6 style={{color : "warning"}}>       {item.match_status}'
+                              </h6>
                              <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-    
-    
-    if(sui.length > 0){
-  
-                setsaudi2({name     : "Saudi Pro League", crest : (<img src="https://apiv3.apifootball.com/badges/logo_leagues/278_saudi-league.png"style = {{height : "40px", width : "40px"}}></img>)})
-    setsaudi(sui.map((item)=>{
-      
-        return(
-                                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
-                                                                
-                            <div className="indi_matches">
-    
-                            <div className="teams_names">
-                            <h4>{item.match_hometeam_name}</h4>
-                            <h4>{item.match_awayteam_name}</h4>
-                            </div>
-                            <div className="teams_scores">
-                                <h4>{item.match_hometeam_score}</h4>
-                                <h4>{item.match_awayteam_score}</h4>
-                            </div>
-    
-                    <div className="time_and_love">
-                                    <h6 style={{color : "warning"}}>   {item.match_status}'
-                                </h6>
-                          <p className="text-warning">{item.match_time} || {item.match_date}</p>
-                            
-                            
-                    </div>
-                    </div>
-                    </Link>
-        )
-         } ))
-    
-    }
-  
+                          
+                          
+                  </div>
+                  </div>
+                  </Link>
+      )
+       } ))
+
+}
+
+
+
+if(eup.length > 0){
+      seteup2({name     : "UEFA EUROPEAN LEAGUE", crest : (    <img src=    "https://apiv3.apifootball.com/badges/logo_leagues/3_uefa-champions-league.png"style = {{height : "40px", width : "40px"}}></img>)})
+seteup(eup.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                          <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(con.length > 0){
+         setcon2({name     : "UEFA Conference League", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/683_uefa-europa-conference-league.png"style = {{height : "40px", width : "40px"}}></img>)})
+          setcon(con.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                          <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+
+if(afcon.length > 0){
+
+  setafcon2( {name     : "African Cup of Nations",crest : (<img src=  "https://apiv3.apifootball.com/badges/logo_leagues/29_africa-cup-of-nations-qualification.png" style = {{height : "40px", width : "40px"}}></img>)})
+setafcon(afcon.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                <p className="text-warning">{item.match_time}  ||  {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+
+if(euros.length > 0){
+
+         seteuros2({name     : "UEFA EUREOPEAN CHAMPIONSHIP", crest : (   "https://apiv3.apifootball.com/badges/logo_leagues/683_uefa-europa-conference-league.png")})
+seteuros(euros.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                           <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+
+
+
+
+if(copa.length > 0){
+
+         setcopa2({name     : "COPA AMERICA", crest : (  <img src =   "https://apiv3.apifootball.com/badges/logo_leagues/17_copa-america.png"style = {{height : "40px", width : "40px"}}></img>)})
+  setcopa(copa.map((item)=>{ 
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+<p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(asia.length > 0){
+
+          setasia2({name     : "AFC ASIAN CUP", crest : (   <img src= "https://apiv3.apifootball.com/badges/logo_leagues/347_afc-asian-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
+setasia(asia.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                   <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+if(laliga.length > 0){
+
+         setlaliga2({name     : "La Liga", crest : (   <img src= "https://apiv3.apifootball.com/badges/logo_leagues/302_la-liga.png"style = {{height : "40px", width : "40px"}}></img>)})
+setlaliga(laliga.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                   <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(seria_a.length > 0){
+
+      setserial2({name     : "SERIA A",crest : ( <img src = "https://apiv3.apifootball.com/badges/logo_leagues/207_serie-a.png"style = {{height : "40px", width : "40px"}}></img>)})
+  setseria(seria_a.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                         <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+if(bundeslisga.length > 0){
+
+      setbundesliga2({name     : "Bundesliga", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/175_bundesliga.png"style = {{height : "40px", width : "40px"}}></img>)})
+setbundesliga(bundeslisga.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                       <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(ligue1.length > 0){
+
+      setligue2({name     : "Ligue 1", crest : ( <img src = "https://apiv3.apifootball.com/badges/logo_leagues/168_ligue-1.png"style = {{height : "40px", width : "40px"}}></img>)})
+setligue(ligue1.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                         <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(copadel.length > 0){
+
+      setcopadel2({name     : "Copa del Ray", crest : (<img src =" https://apiv3.apifootball.com/badges/logo_leagues/300_copa-del-rey.png"style = {{height : "40px", width : "40px"}}></img>)})
+setcopadel(copadel.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>
+                          {item.match_status}'
+                          </h6>
+<p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(fa_cup.length > 0){
+
+setfa_cup2({name     : "England FA Cup", crest : (<img src = "https://apiv3.apifootball.com/badges/logo_leagues/146_fa-cup.png"style = {{height : "40px", width : "40px"}}></img>)})
+setfa(fa_cup.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                      <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(mls.length > 0){
+
+      setmls2({name     : "Major League Soccer", crest : (<img src=  "https://apiv3.apifootball.com/badges/logo_leagues/332_mls.png"style = {{height : "40px", width : "40px"}}></img>)})
+setmls(mls.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                       <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
+
+if(sui.length > 0){
+
+          setsaudi2({name     : "Saudi Pro League", crest : (<img src="https://apiv3.apifootball.com/badges/logo_leagues/278_saudi-league.png"style = {{height : "40px", width : "40px"}}></img>)})
+setsaudi(sui.map((item)=>{
+
+  return(
+                                      <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                          
+                      <div className="indi_matches">
+
+                      <div className="teams_names">
+                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
+                     <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                      </div>
+                      <div className="teams_scores">
+                          <h4>{item.match_hometeam_score}</h4>
+                          <h4>{item.match_awayteam_score}</h4>
+                      </div>
+
+              <div className="time_and_love">
+                              <h6 style={{color : "warning"}}>   {item.match_status}'
+                          </h6>
+                    <p className="text-warning">{item.match_time} || {item.match_date}</p>
+                      
+                      
+              </div>
+              </div>
+              </Link>
+  )
+   } ))
+
+}
+
     setRet(
         <>
             <div>
