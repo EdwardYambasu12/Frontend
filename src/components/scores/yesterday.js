@@ -130,9 +130,7 @@ function Yesterday(){
           if(item.league_id == 207){
               euros.push(item)
           }
-          if(item.league_id == 152){
-              epl.push(item)
-          }
+
   
           if(item.league_id == 207){
               seria_a.push(item)
@@ -161,7 +159,7 @@ function Yesterday(){
 
   if(epl.length > 0){
         
-    setepl2({name     : "Premier League",crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
+    setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png"style = {{height : "40px", width : "40px"}}></img>)})
     setpl(epl.map((item)=>{
       
         return(
@@ -559,7 +557,7 @@ if(seria_a.length > 0){
               <div className="time_and_love">
                               <h6 style={{color : "warning"}}>   {item.match_status}'
                           </h6>
-                         <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
+                         <p className="text-warning">{item.match_time} || {item.match_date}</p>  
                       
                       
               </div>

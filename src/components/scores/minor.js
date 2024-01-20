@@ -3,6 +3,7 @@ import Nav from "../nav_bar/nav";
 import { Link, useLocation } from 'react-router-dom'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import Footer from './footer/footer';
 export default function Minor() {
   const [ret, setRet] = useState(<Backdrop
     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -52,6 +53,8 @@ export default function Minor() {
         <div style = {{height : window.innerHeight - 200, overflowY : "auto"}}>
         {ret}
         </div>
+        <Footer></Footer>
+        
     </body>
   )
 }

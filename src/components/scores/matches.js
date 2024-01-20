@@ -116,9 +116,7 @@ function Matches(){
                     if(item.league_id == 168){
                         ligue1.push(item)
                     }
-                    if(item.league_id == 152){
-                        epl.push(item)
-                    }
+
                     if(item.league_id == 347){
                         asia.push(item)
                       
@@ -183,7 +181,7 @@ function Matches(){
                
           if(epl.length > 0){
         
-            setepl2({name     : "Premier League",crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
+            setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png" style = {{height : "40px", width : "40px"}}></img>)})
             setpl(epl.map((item)=>{
               
                 return(
@@ -571,7 +569,7 @@ function Matches(){
       
                               <div className="teams_names">
                               <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
                               </div>
                               <div className="teams_scores">
                                   <h4>{item.match_hometeam_score}</h4>
@@ -581,7 +579,7 @@ function Matches(){
                       <div className="time_and_love">
                                       <h6 style={{color : "warning"}}>   {item.match_status}'
                                   </h6>
-                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
+                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>  
                               
                               
                       </div>
@@ -1040,7 +1038,7 @@ function Matches(){
 
         if(epl.length > 0){
         
-            setepl2({name     : "Premier League",crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
+            setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png" style = {{height : "40px", width : "40px"}}></img>)})
             setpl(epl.map((item)=>{
               
                 return(
@@ -1438,8 +1436,7 @@ function Matches(){
                       <div className="time_and_love">
                                       <h6 style={{color : "warning"}}>   {item.match_status}'
                                   </h6>
-                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
-                              
+                                 <p className="text-warning">{item.match_time} || {item.match_date}</p>  
                               
                       </div>
                       </div>

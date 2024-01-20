@@ -9,6 +9,7 @@ import Minor from "./components/scores/minor"
 import Yesterday from "./components/scores/yesterday"
 import Tomorrows from "./components/scores/tomorrow"
 import Live from "./components/scores/live"
+import Modern from "./components/nav_bar/moder"
 
 
 function App(){
@@ -25,6 +26,7 @@ function App(){
         <Route path="/yesterday" element={<Yesterday/>}></Route>
         <Route path="/tomorrow" element={<Tomorrows/>}></Route>
         <Route path="/live" element={<Live/>}></Route>
+        <Route path="/modern" element={<Modern/>}></Route>
       </Routes>
     </Router>
 

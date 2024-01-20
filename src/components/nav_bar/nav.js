@@ -4,7 +4,8 @@ import "./nav.css"
 function Nav(){
     return(
         <>
-            <nav className="main_nav">
+
+            <nav className="navbar " id="main_nav">
                 <div className="title">
                 <img alt="logo" src={require("../images/main_logo.png")} style={{height : "50px", width : "50px", borderRadius : "50%"}}></img>
                 <h3>SportsUp</h3>
@@ -14,10 +15,7 @@ function Nav(){
                     <input type="text" placeholder="search : Team Player e.t.c" className="form-control"></input>
 
                 </div>
-                <div className="user_info">
-                    <button className="btn">Register</button>
-                    <button className= "btn">Login</button>
-                </div>
+
             </nav>
         </>
     )

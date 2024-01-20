@@ -5,17 +5,8 @@
     background-color: gold;
     display: flex;
     align-items: center;
-    height: 70px;
-}
 
-.main_footer .title{
-    display: flex;
+    position : "fixed";
+    bottom : 0%
 }
-.main_footer .mid input{
-    width : 100%
-}
-.main_footer .mid{
-    width: 40%;
-}
-
 

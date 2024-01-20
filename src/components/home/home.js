@@ -3,6 +3,7 @@ import Nav from "../nav_bar/nav";
 import Scores from "../scores/scores";
 import Infos from "../infos/infos";
 import "./home.css"
+import Footer from "../scores/footer/footer";
 function Home(){
 
     const [color1, setColor1] = useState("btn btn-light")
@@ -33,7 +34,7 @@ function Home(){
         </div>
         <hr></hr>
         <div className="contents">{content}</div>
-
+        <Footer></Footer>
         </body>
     )
 }   

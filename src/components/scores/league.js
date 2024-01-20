@@ -103,6 +103,7 @@ let num = 0
             <h2>Available Teams</h2>
             {Teams}
             </div>
+<footer></footer>
         </body>
     )
 }

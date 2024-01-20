@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Nav from '../nav_bar/nav'
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress'
+import Footer from '../scores/footer/footer';
 
 
 export default function Players() {
@@ -67,6 +68,8 @@ export default function Players() {
         <Nav></Nav>
         <Link className="btn btn-danger text-left"  to={"/"}>return home</Link>
       {inner}
+      <Footer></Footer>
+      
     </body>
   )
 }

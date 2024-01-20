@@ -5,6 +5,7 @@ import "./personal.css"
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress'
 import Line_up from "./lineup";
+import Footer from "../scores/footer/footer";
 
 function Personal(props){
 
@@ -137,6 +138,7 @@ fetcher()
         </div>
 
         {lower}
+        <Footer></Footer>
         </>
         </body>
     )

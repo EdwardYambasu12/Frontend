@@ -3,7 +3,7 @@ import "./matches.css"
 import { Link } from "react-router-dom";
 
 import Today from "./today";
-
+import Tomorrow from "./tomorrow"
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Nav from "../nav_bar/nav";
@@ -80,7 +80,7 @@ function Live(){
       </Backdrop>
     )
 
-  async function previous(){
+ async function previous(){
     try{
         const result1 =await fetch("https://sportsulp.onrender.com/live_matches"); 
         const main1 = await result1.json()
@@ -130,9 +130,7 @@ function Live(){
           if(item.league_id == 207){
               euros.push(item)
           }
-          if(item.league_id == 152){
-              epl.push(item)
-          }
+
   
           if(item.league_id == 207){
               seria_a.push(item)
@@ -161,7 +159,7 @@ function Live(){
 
   if(epl.length > 0){
         
-    setepl2({name     : "Premier League",crest : ( <img src ={require("../images/main_logo.png")} style = {{height : "40px", width : "40px"}}></img>)})
+    setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png" style = {{height : "40px", width : "40px"}}></img>)})
     setpl(epl.map((item)=>{
       
         return(
@@ -559,7 +557,7 @@ if(seria_a.length > 0){
               <div className="time_and_love">
                               <h6 style={{color : "warning"}}>   {item.match_status}'
                           </h6>
-                         <p className="text-warning">{item.match_time} || {item.match_date}</p>  <p className="text-warning">{item.match_date}</p>
+                         <p className="text-warning">{item.match_time} || {item.match_date}</p>  
                       
                       
               </div>
@@ -774,146 +772,146 @@ setsaudi(sui.map((item)=>{
 
 }
 
-    setRet(
-        <>
-            <div>
-  <div style = {{display : "flex"}}>{wc2.crest} <h3 className = "text-light"> {wc2.name} </h3>
-  </div>
-  {wc1}
-  </div>
   
   
-  <div>
-  <div style = {{display : "flex"}}>{cl2.crest} <h3 className = "text-light"> {cl2.name} </h3>
-  </div>
-  {cl1}
-  
-  
-  
-  </div>
-  
-  <div>
-  <div style = {{display : "flex"}}>{eup2.crest} <h3 className = "text-light"> {eup2.name} </h3>
-  </div>
-  {eup1}
-  
-  
-  </div>
-  
-  
-  
-  <div>
-  <div style = {{display : "flex"}}>{con2.crest} <h3 className = "text-light"> {con2.name} </h3>
-  </div>
-  {con1}
-  
-  </div>
-  
-  
-  <div>
-  <div style = {{display : "flex"}}>{afcon2.crest} <h3 className = "text-light"> {afcon2.name} </h3>
-  </div>
-  {afcon1}
-  
-  
-  
-  <div>
-  <div style = {{display : "flex"}}>{euros2.crest} <h3 className = "text-light"> {euros2.name} </h3>
-  </div>
-  {euros1}
-  
-  
-  
-  <div>
-  <div style = {{display : "flex"}}>{copa2.crest} <h3 className = "text-light"> {copa2.name} </h3>
-  </div>
-  {copa1}
-  
-  </div>
-  
-  <div>
-  <div style = {{display : "flex"}}>{asia2.crest} <h3 className = "text-light"> {asia2.name} </h3>
-  </div>
-  {asia1}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{epl2.crest} <h3 className = "text-light"> {epl2.name} </h3>
-  </div>
-  {epl1}
-  </div>
-  
-  <div>
-  <div style = {{display : "flex"}}>{laliga2.crest} <h3 className = "text-light"> {laliga2.name} </h3>
-  </div>
-  {laliga1}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{serial2.crest} <h3 className = "text-light"> {serial2.name} </h3>
-  </div>
-  {seria1}
-  </div>
-  
-  <div>
-  <div style = {{display : "flex"}}>{bundesliga2.crest} <h3 className = "text-light"> {bundesliga2.name} </h3>
-  </div>
-  {bundeslig1}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{ligue2.crest} <h3 className = "text-light"> {ligue2.name} </h3>
-  </div>
-  {ligue}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{fa_cup2.crest} <h3 className = "text-light"> {fa_cup2.name} </h3>
-  </div>
-  {fa_cup1}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{copadel2.crest} <h3 className = "text-light"> {copadel2.name} </h3>
-  </div>
-  {copadel1}
-  
-  </div>
-  <div>
-  <div style = {{display : "flex"}}>{mls2.crest} <h3 className = "text-light"> {mls2.name} </h3>
-  </div>
-  {mls1}
-  
-  </div>
-   <div>
-  <div style = {{display : "flex"}}>{saudi2.crest} <h3 className = "text-light"> {saudi2.name} </h3>
-  </div>
-  {saudi}
-  
-  </div>
-  
-  
-   <div>
-  <div style = {{display : "flex"}}>{others2.crest} <h3 className = "text-light"> {others2.name} </h3>
-  
-  </div>
-  {others1}
-  </div>
-  
-  </div>
-  
-  
-  </div>
-  
-        </>
-      )
     }
-
     catch (error){
 
     }
-setTimeout(previous, 10000)
-   
+
+    setRet(
+      <>
+          <div>
+<div style = {{display : "flex"}}>{wc2.crest} <h3 className = "text-light"> {wc2.name} </h3>
+</div>
+{wc1}
+</div>
+
+
+<div>
+<div style = {{display : "flex"}}>{cl2.crest} <h3 className = "text-light"> {cl2.name} </h3>
+</div>
+{cl1}
+
+
+
+</div>
+
+<div>
+<div style = {{display : "flex"}}>{eup2.crest} <h3 className = "text-light"> {eup2.name} </h3>
+</div>
+{eup1}
+
+
+</div>
+
+
+
+<div>
+<div style = {{display : "flex"}}>{con2.crest} <h3 className = "text-light"> {con2.name} </h3>
+</div>
+{con1}
+
+</div>
+
+
+<div>
+<div style = {{display : "flex"}}>{afcon2.crest} <h3 className = "text-light"> {afcon2.name} </h3>
+</div>
+{afcon1}
+
+
+
+<div>
+<div style = {{display : "flex"}}>{euros2.crest} <h3 className = "text-light"> {euros2.name} </h3>
+</div>
+{euros1}
+
+
+
+<div>
+<div style = {{display : "flex"}}>{copa2.crest} <h3 className = "text-light"> {copa2.name} </h3>
+</div>
+{copa1}
+
+</div>
+
+<div>
+<div style = {{display : "flex"}}>{asia2.crest} <h3 className = "text-light"> {asia2.name} </h3>
+</div>
+{asia1}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{epl2.crest} <h3 className = "text-light"> {epl2.name} </h3>
+</div>
+{epl1}
+</div>
+
+<div>
+<div style = {{display : "flex"}}>{laliga2.crest} <h3 className = "text-light"> {laliga2.name} </h3>
+</div>
+{laliga1}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{serial2.crest} <h3 className = "text-light"> {serial2.name} </h3>
+</div>
+{seria1}
+</div>
+
+<div>
+<div style = {{display : "flex"}}>{bundesliga2.crest} <h3 className = "text-light"> {bundesliga2.name} </h3>
+</div>
+{bundeslig1}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{ligue2.crest} <h3 className = "text-light"> {ligue2.name} </h3>
+</div>
+{ligue}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{fa_cup2.crest} <h3 className = "text-light"> {fa_cup2.name} </h3>
+</div>
+{fa_cup1}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{copadel2.crest} <h3 className = "text-light"> {copadel2.name} </h3>
+</div>
+{copadel1}
+
+</div>
+<div>
+<div style = {{display : "flex"}}>{mls2.crest} <h3 className = "text-light"> {mls2.name} </h3>
+</div>
+{mls1}
+
+</div>
+ <div>
+<div style = {{display : "flex"}}>{saudi2.crest} <h3 className = "text-light"> {saudi2.name} </h3>
+</div>
+{saudi}
+
+</div>
+
+
+ <div>
+<div style = {{display : "flex"}}>{others2.crest} <h3 className = "text-light"> {others2.name} </h3>
+
+</div>
+{others1}
+</div>
+
+</div>
+
+
+</div>
+
+      </>
+    )
    }
 
 
@@ -921,7 +919,7 @@ setTimeout(previous, 10000)
 previous()
 
     return(
-        <body style={{maxHeight : window.innerHeight}}>
+        <body style={{}}>
             <Nav/>
             
             <div className="matches_date">
