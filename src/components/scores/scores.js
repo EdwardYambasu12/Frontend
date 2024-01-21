@@ -31,6 +31,8 @@ function Scores(){
                     <h3 className="text-center">Ads</h3>
                 </div>
             </div>
+
+            
         </body>
     )
 }

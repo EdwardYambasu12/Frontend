@@ -3,12 +3,27 @@ import "./matches.css"
 import { Link } from "react-router-dom";
 
 import Today from "./today";
-import Tomorrow from "./tomorrow"
+
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Nav from "../nav_bar/nav";
-function Live(){
 
+import Datepicker from "react-datepicker"
+import 'react-datepicker/dist/react-datepicker.css'
+import Footer from "./footer/footer";
+
+function Custom_input({value, onClick}){
+    
+  return(
+    <>
+  
+  <Link className="btn-dark btn" id = "call" onClick={onClick} to={"/modern"}>📅</Link>
+    
+    </>
+  )
+}
+function Live(){
+    const [selectedDate, setDate] = useState(null);
     var epl = []
     var wc= []
     var cl= []
@@ -80,14 +95,39 @@ function Live(){
       </Backdrop>
     )
 
- async function previous(){
+  async function previous(){
     try{
         const result1 =await fetch("https://sportsulp.onrender.com/live_matches"); 
         const main1 = await result1.json()
         console.log("edward")
-        console.log(main1)
+        console.log(main1, "edward")
+
+       setRet( main1.map((item)=>{
+            return(
+                            <Link to={"/personal"} state={item} style={{textDecoration : "none"}}>
+                                                
+            <div className="indi_matches">
+
+            <div className="teams_names">
+            <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+            <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
+            </div>
+            <div className="teams_scores">
+                <h6>{item.match_hometeam_score}</h6>
+                <h6>{item.match_awayteam_score}</h6>
+            </div>
+
+            <div className="time_and_love">
+                    <h6 style={{color : "warning"}}>   {item.match_status}'
+                </h6>
+            <p className="text-warning">{item.match_time} || {item.match_date}</p>
 
 
+            </div>
+            </div>
+            </Link>
+)
+        }))
         main1.map((item)=>{
     
           if(item.league_id == 28){
@@ -119,18 +159,18 @@ function Live(){
           if(item.league_id == 168){
               ligue1.push(item)
           }
-          if(item.league_id == 152){
-              epl.push(item)
-          }
+  
           if(item.league_id == 347){
               asia.push(item)
               console.log(item)
   
           }
           if(item.league_id == 207){
-              euros.push(item)
+              seria_a.push(item)
           }
-
+          if(item.league_id == 152){
+              epl.push(item)
+          }
   
           if(item.league_id == 207){
               seria_a.push(item)
@@ -773,145 +813,12 @@ setsaudi(sui.map((item)=>{
 }
 
   
-  
     }
     catch (error){
 
     }
 
-    setRet(
-      <>
-          <div>
-<div style = {{display : "flex"}}>{wc2.crest} <h3 className = "text-light"> {wc2.name} </h3>
-</div>
-{wc1}
-</div>
-
-
-<div>
-<div style = {{display : "flex"}}>{cl2.crest} <h3 className = "text-light"> {cl2.name} </h3>
-</div>
-{cl1}
-
-
-
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{eup2.crest} <h3 className = "text-light"> {eup2.name} </h3>
-</div>
-{eup1}
-
-
-</div>
-
-
-
-<div>
-<div style = {{display : "flex"}}>{con2.crest} <h3 className = "text-light"> {con2.name} </h3>
-</div>
-{con1}
-
-</div>
-
-
-<div>
-<div style = {{display : "flex"}}>{afcon2.crest} <h3 className = "text-light"> {afcon2.name} </h3>
-</div>
-{afcon1}
-
-
-
-<div>
-<div style = {{display : "flex"}}>{euros2.crest} <h3 className = "text-light"> {euros2.name} </h3>
-</div>
-{euros1}
-
-
-
-<div>
-<div style = {{display : "flex"}}>{copa2.crest} <h3 className = "text-light"> {copa2.name} </h3>
-</div>
-{copa1}
-
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{asia2.crest} <h3 className = "text-light"> {asia2.name} </h3>
-</div>
-{asia1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{epl2.crest} <h3 className = "text-light"> {epl2.name} </h3>
-</div>
-{epl1}
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{laliga2.crest} <h3 className = "text-light"> {laliga2.name} </h3>
-</div>
-{laliga1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{serial2.crest} <h3 className = "text-light"> {serial2.name} </h3>
-</div>
-{seria1}
-</div>
-
-<div>
-<div style = {{display : "flex"}}>{bundesliga2.crest} <h3 className = "text-light"> {bundesliga2.name} </h3>
-</div>
-{bundeslig1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{ligue2.crest} <h3 className = "text-light"> {ligue2.name} </h3>
-</div>
-{ligue}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{fa_cup2.crest} <h3 className = "text-light"> {fa_cup2.name} </h3>
-</div>
-{fa_cup1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{copadel2.crest} <h3 className = "text-light"> {copadel2.name} </h3>
-</div>
-{copadel1}
-
-</div>
-<div>
-<div style = {{display : "flex"}}>{mls2.crest} <h3 className = "text-light"> {mls2.name} </h3>
-</div>
-{mls1}
-
-</div>
- <div>
-<div style = {{display : "flex"}}>{saudi2.crest} <h3 className = "text-light"> {saudi2.name} </h3>
-</div>
-{saudi}
-
-</div>
-
-
- <div>
-<div style = {{display : "flex"}}>{others2.crest} <h3 className = "text-light"> {others2.name} </h3>
-
-</div>
-{others1}
-</div>
-
-</div>
-
-
-</div>
-
-      </>
-    )
+    setTimeout(previous, 60000)
    }
 
 
@@ -919,12 +826,12 @@ setsaudi(sui.map((item)=>{
 previous()
 
     return(
-        <body style={{}}>
+        <body >
             <Nav/>
             
             <div className="matches_date">
             <input  type="date" hidden id="date_input"></input>
-                <Link className="btn-dark btn" id = "call"  >📅</Link>
+            <Datepicker selected={selectedDate} onChange = {date=> setDate(date)} customInput = {<Custom_input/>}/>
                 <Link className="btn btn-outline-secondary" to={"/yesterday"}>Yesterday</Link>
                 <Link className="btn btn-outline-warning" to = {"/"} >TODAY </Link>
                 <Link className="btn btn-outline-info" to={'/tomorrow'} >Tomorrow </Link>
@@ -939,7 +846,7 @@ previous()
 </div>
 
 
-
+<Footer/>
         </body>
     )
 

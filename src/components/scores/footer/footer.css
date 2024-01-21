@@ -5,8 +5,16 @@
     background-color: gold;
     display: flex;
     align-items: center;
-
+    overflow-y: auto;
     position : "fixed";
     bottom : 0%
 }
+
+
+@media only screen and (max-width: 750px){
+    .main_footer{
+        display: none;
+    }
+}
+    
 

@@ -5,8 +5,22 @@ import Yesterday from "./yesterday";
 import Today from "./today";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-function Matches(){
 
+import Datepicker from "react-datepicker"
+import 'react-datepicker/dist/react-datepicker.css'
+
+function Custom_input({value, onClick}){
+    
+  return(
+    <>
+  
+  <btn className="btn-dark btn" id = "call" onClick={onClick}  state ={value}>📅</btn>
+    
+    </>
+  )
+}
+function Matches(){
+    const [selectedDate, setDate] = useState(null);
     var epl = []
     var wc= []
     var cl= []
@@ -190,12 +204,12 @@ function Matches(){
                                     <div className="indi_matches">
     
                                     <div className="teams_names">
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                     </div>
                                     <div className="teams_scores">
-                                        <h4>{item.match_hometeam_score}</h4>
-                                        <h4>{item.match_awayteam_score}</h4>
+                                        <h6>{item.match_hometeam_score}</h6>
+                                        <h6>{item.match_awayteam_score}</h6>
                                     </div>
     
                             <div className="time_and_love">
@@ -223,12 +237,12 @@ function Matches(){
                                   <div className="indi_matches">
   
                                   <div className="teams_names">
-         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                   </div>
                                   <div className="teams_scores">
-                                      <h4>{item.match_hometeam_score}</h4>
-                                      <h4>{item.match_awayteam_score}</h4>
+                                      <h6>{item.match_hometeam_score}</h6>
+                                      <h6>{item.match_awayteam_score}</h6>
                                   </div>
   
                           <div className="time_and_love">
@@ -258,12 +272,12 @@ function Matches(){
                                       <div className="indi_matches">
       
                                       <div className="teams_names">
-                                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                       </div>
                                       <div className="teams_scores">
-                                          <h4>{item.match_hometeam_score}</h4>
-                                          <h4>{item.match_awayteam_score}</h4>
+                                          <h6>{item.match_hometeam_score}</h6>
+                                          <h6>{item.match_awayteam_score}</h6>
                                       </div>
       
                               <div className="time_and_love">
@@ -292,12 +306,12 @@ function Matches(){
                                   <div className="indi_matches">
       
                                   <div className="teams_names">
-         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                   </div>
                                   <div className="teams_scores">
-                                      <h4>{item.match_hometeam_score}</h4>
-                                      <h4>{item.match_awayteam_score}</h4>
+                                      <h6>{item.match_hometeam_score}</h6>
+                                      <h6>{item.match_awayteam_score}</h6>
                                   </div>
       
                           <div className="time_and_love">
@@ -326,12 +340,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -359,12 +373,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -394,12 +408,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -429,12 +443,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -467,12 +481,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -501,12 +515,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -534,12 +548,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -568,12 +582,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -601,12 +615,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -635,12 +649,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -669,12 +683,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -704,12 +718,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -738,12 +752,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -772,12 +786,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                             <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                             <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1047,12 +1061,12 @@ function Matches(){
                                     <div className="indi_matches">
     
                                     <div className="teams_names">
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                     </div>
                                     <div className="teams_scores">
-                                        <h4>{item.match_hometeam_score}</h4>
-                                        <h4>{item.match_awayteam_score}</h4>
+                                        <h6>{item.match_hometeam_score}</h6>
+                                        <h6>{item.match_awayteam_score}</h6>
                                     </div>
     
                             <div className="time_and_love">
@@ -1080,12 +1094,12 @@ function Matches(){
                                   <div className="indi_matches">
   
                                   <div className="teams_names">
-         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                   </div>
                                   <div className="teams_scores">
-                                      <h4>{item.match_hometeam_score}</h4>
-                                      <h4>{item.match_awayteam_score}</h4>
+                                      <h6>{item.match_hometeam_score}</h6>
+                                      <h6>{item.match_awayteam_score}</h6>
                                   </div>
   
                           <div className="time_and_love">
@@ -1115,12 +1129,12 @@ function Matches(){
                                       <div className="indi_matches">
       
                                       <div className="teams_names">
-                                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                                      <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                       </div>
                                       <div className="teams_scores">
-                                          <h4>{item.match_hometeam_score}</h4>
-                                          <h4>{item.match_awayteam_score}</h4>
+                                          <h6>{item.match_hometeam_score}</h6>
+                                          <h6>{item.match_awayteam_score}</h6>
                                       </div>
       
                               <div className="time_and_love">
@@ -1149,12 +1163,12 @@ function Matches(){
                                   <div className="indi_matches">
       
                                   <div className="teams_names">
-         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+         <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                                   </div>
                                   <div className="teams_scores">
-                                      <h4>{item.match_hometeam_score}</h4>
-                                      <h4>{item.match_awayteam_score}</h4>
+                                      <h6>{item.match_hometeam_score}</h6>
+                                      <h6>{item.match_awayteam_score}</h6>
                                   </div>
       
                           <div className="time_and_love">
@@ -1183,12 +1197,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1216,12 +1230,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1251,12 +1265,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1286,12 +1300,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1324,12 +1338,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1358,12 +1372,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1391,12 +1405,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1425,12 +1439,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1457,12 +1471,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1491,12 +1505,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1525,12 +1539,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1560,12 +1574,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1594,12 +1608,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                                        <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1628,12 +1642,12 @@ function Matches(){
                               <div className="indi_matches">
       
                               <div className="teams_names">
-                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h4>{item.match_hometeam_name}</h4></div>
-                             <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h4>{item.match_awayteam_name}</h4></div>
+                              <div style={{display : "flex", alignItems : "center"}}><img src={item.team_home_badge} style={{width : "20px", height : "20px"}}></img> <h6>{item.match_hometeam_name}</h6></div>
+                             <div style={{display : "flex", alignItems : "center"}}><img src={item.team_away_badge}style={{width : "20px", height : "20px"}}></img> <h6>{item.match_awayteam_name}</h6></div>
                               </div>
                               <div className="teams_scores">
-                                  <h4>{item.match_hometeam_score}</h4>
-                                  <h4>{item.match_awayteam_score}</h4>
+                                  <h6>{item.match_hometeam_score}</h6>
+                                  <h6>{item.match_awayteam_score}</h6>
                               </div>
       
                       <div className="time_and_love">
@@ -1893,7 +1907,14 @@ setRet(
     
    }
 
+useEffect(()=>{
+    console.log(selectedDate)
+    const date = new Date(selectedDate)
+    console.log(date.getDay())
+    const select = date.toISOString().split('T')[0]
+    console.log(select)
 
+}, [selectedDate])
 
 
 
@@ -1903,7 +1924,7 @@ setRet(
             
             <div className="matches_date">
             <input  type="date" hidden id="date_input"></input>
-                <Link className="btn-dark btn" id = "call"  >📅</Link>
+           <Datepicker selected={selectedDate} onChange = {date=> setDate(date)} customInput = {<Custom_input/>}/>
                 <Link className="btn btn-outline-secondary" to={"/yesterday"}>Yesterday</Link>
                 <Link className="btn btn-outline-warning" to = {"/"} >TODAY </Link>
                 <Link className="btn btn-outline-info" to={'/tomorrow'} >Tomorrow </Link>

@@ -3,12 +3,26 @@ import "./matches.css"
 import { Link } from "react-router-dom";
 
 import Today from "./today";
-import Tomorrow from "./tomorrow"
+
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Nav from "../nav_bar/nav";
-function Yesterday(){
 
+import Datepicker from "react-datepicker"
+import 'react-datepicker/dist/react-datepicker.css'
+
+function Custom_input({value, onClick}){
+    
+  return(
+    <>
+  
+  <Link className="btn-dark btn" id = "call" onClick={onClick} >📅</Link>
+    
+    </>
+  )
+}
+function Yesterday(){
+    const [selectedDate, setDate] = useState(null);
     var epl = []
     var wc= []
     var cl= []
@@ -80,7 +94,7 @@ function Yesterday(){
       </Backdrop>
     )
 
- async function previous(){
+  async function previous(){
     try{
         const result1 =await fetch("https://sportsulp.onrender.com/yesterday"); 
         const main1 = await result1.json()
@@ -119,18 +133,18 @@ function Yesterday(){
           if(item.league_id == 168){
               ligue1.push(item)
           }
-          if(item.league_id == 152){
-              epl.push(item)
-          }
+  
           if(item.league_id == 347){
               asia.push(item)
               console.log(item)
   
           }
           if(item.league_id == 207){
-              euros.push(item)
+              seria_a.push(item)
           }
-
+          if(item.league_id == 152){
+              epl.push(item)
+          }
   
           if(item.league_id == 207){
               seria_a.push(item)
@@ -159,7 +173,7 @@ function Yesterday(){
 
   if(epl.length > 0){
         
-    setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png"style = {{height : "40px", width : "40px"}}></img>)})
+    setepl2({name     : "Premier League",crest : ( <img src ="https://apiv3.apifootball.com/badges/logo_leagues/152_premier-league.png" style = {{height : "40px", width : "40px"}}></img>)})
     setpl(epl.map((item)=>{
       
         return(
@@ -919,12 +933,12 @@ setsaudi(sui.map((item)=>{
 previous()
 
     return(
-        <body style={{}}>
+        <body >
             <Nav/>
             
             <div className="matches_date">
             <input  type="date" hidden id="date_input"></input>
-                <Link className="btn-dark btn" id = "call"  >📅</Link>
+            <Datepicker selected={selectedDate} onChange = {date=> setDate(date)} customInput = {<Custom_input/>}/>
                 <Link className="btn btn-outline-secondary" to={"/yesterday"}>Yesterday</Link>
                 <Link className="btn btn-outline-warning" to = {"/"} >TODAY </Link>
                 <Link className="btn btn-outline-info" to={'/tomorrow'} >Tomorrow </Link>

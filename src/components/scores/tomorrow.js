@@ -8,9 +8,21 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Nav from "../nav_bar/nav";
 
+import Datepicker from "react-datepicker"
+import 'react-datepicker/dist/react-datepicker.css'
 
+function Custom_input({value, onClick}){
+    
+  return(
+    <>
+  
+  <Link className="btn-dark btn" id = "call" onClick={onClick} >📅</Link>
+    
+    </>
+  )
+}
 function Tomorrows(){
-
+    const [selectedDate, setDate] = useState(null);
     var epl = []
     var wc= []
     var cl= []
@@ -926,7 +938,7 @@ previous()
             
             <div className="matches_date">
             <input  type="date" hidden id="date_input"></input>
-                <Link className="btn-dark btn" id = "call"  >📅</Link>
+            <Datepicker selected={selectedDate} onChange = {date=> setDate(date)} customInput = {<Custom_input/>}/>
                 <Link className="btn btn-outline-secondary" to={"/yesterday"}>Yesterday</Link>
                 <Link className="btn btn-outline-warning" to = {"/"} >TODAY </Link>
                 <Link className="btn btn-outline-info" to={'/tomorrow'} >Tomorrow </Link>
