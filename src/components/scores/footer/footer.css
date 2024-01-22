@@ -1,20 +1,49 @@
 
-.main_footer{
-    width: 100%;
-    justify-content: space-between;
-    background-color: gold;
+nav{
+    justify-content: space-around;
+    color : "white"
+}
+.share{
     display: flex;
     align-items: center;
-    overflow-y: auto;
-    position : "fixed";
-    bottom : 0%
+    justify-content: space-around;
 }
-
+#wider-screen{
+    justify-content: space-around;
+    display: flex;
+}
 
 @media only screen and (max-width: 750px){
-    .main_footer{
+    #wider-screen{
         display: none;
+        color : "white"
     }
-}
-    
 
+    #body{
+        background-color: blue;
+    }
+
+
+}
+@media only screen and (min-width : 750px){
+    #smaller-screen{
+        display: none;
+        width: 100%;
+    }
+    
+}
+
+.mini{
+    width: 100%;
+}
+#smaller_button{
+    width: 100%;
+    text-decoration: none;
+}
+#txt{
+    text-decoration: none;
+    margin-right: 2% ;
+}
+#objectives{
+    width: 50%;
+}

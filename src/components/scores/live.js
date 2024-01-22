@@ -17,7 +17,7 @@ function Custom_input({value, onClick}){
   return(
     <>
   
-  <Link className="btn-dark btn" id = "call" onClick={onClick} to={"/modern"}>📅</Link>
+  <Link className="btn-dark btn" id = "call" onClick={onClick} >📅</Link>
     
     </>
   )
@@ -824,7 +824,14 @@ setsaudi(sui.map((item)=>{
 
 
 previous()
+useEffect(()=>{
+    console.log(selectedDate)
+    const date = new Date(selectedDate)
+    console.log(date.getDay())
+    const select = date.toISOString().split('T')[0]
+    console.log(select)
 
+}, [selectedDate])
     return(
         <body >
             <Nav/>

@@ -928,7 +928,14 @@ setsaudi(sui.map((item)=>{
     )
    }
 
+   useEffect(()=>{
+    console.log(selectedDate)
+    const date = new Date(selectedDate)
+    console.log(date.getDay())
+    const select = date.toISOString().split('T')[0]
+    console.log(select)
 
+}, [selectedDate])
 
 previous()
 
